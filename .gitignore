@@ -1,0 +1,13 @@
+site/
+.claude/
+__pycache__/
+*.pyc
+.env
+.venv/
+*.egg-info/
+dist/
+build/
+.DS_Store
+*.swp
+*.swo
+node_modules/
