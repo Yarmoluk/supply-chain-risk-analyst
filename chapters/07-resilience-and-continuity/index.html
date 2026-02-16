@@ -1,0 +1,1983 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A guide to supply chain risk management based on ISO 28000 and industry best practices.">
+      
+      
+        <meta name="author" content="Daniel Yarmoluk">
+      
+      
+        <link rel="canonical" href="https://yarmoluk.github.io/supply-chain-risk-analyst/chapters/07-resilience-and-continuity/">
+      
+      
+        <link rel="prev" href="../06-technology-and-visibility/">
+      
+      
+        <link rel="next" href="../../glossary/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../img/favicon.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>Content - Supply Chain Risk Analyst</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="cyan">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#chapter-7-resilience-and-continuity" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Supply Chain Risk Analyst" class="md-header__button md-logo" aria-label="Supply Chain Risk Analyst" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Supply Chain Risk Analyst
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Content
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="cyan"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="cyan"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Yarmoluk/supply-chain-risk-analyst" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Supply Chain Risk Analyst" class="md-nav__button md-logo" aria-label="Supply Chain Risk Analyst" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Supply Chain Risk Analyst
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Yarmoluk/supply-chain-risk-analyst" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course-description/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Course Description
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapters
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Chapters
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../01-supply-chain-risk-foundations/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Supply Chain Risk Foundations
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../02-risk-identification/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Risk Identification and Assessment
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../03-iso-28000-framework/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. ISO 28000 Framework and Standards
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../04-supplier-risk-management/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. Supplier Risk Management
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../05-logistics-and-disruption/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. Logistics and Disruption Planning
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../06-technology-and-visibility/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. Technology and Supply Chain Visibility
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_8" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="./" class="md-nav__link md-nav__link--active">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7. Resilience and Business Continuity
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_8_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    7. Resilience and Business Continuity
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Glossary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../references/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    References
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../license/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    License
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contact/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contact
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Introduction
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#understanding-supply-chain-resilience" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Understanding Supply Chain Resilience
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Understanding Supply Chain Resilience">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#resilience-vs-efficiency" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resilience vs Efficiency
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#components-of-resilience" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Components of Resilience
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#business-continuity-planning" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Business Continuity Planning
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Business Continuity Planning">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bcp-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BCP Process
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#supply-chain-resilience-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Supply Chain Resilience Metrics
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Supply Chain Resilience Metrics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key-resilience-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Resilience Metrics
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metric-implementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Metric Implementation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stress-testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stress Testing
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Stress Testing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stress-test-scenarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stress Test Scenarios
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stress-testing-methodology" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stress Testing Methodology
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#crisis-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Crisis Management
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Crisis Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#crisis-management-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Crisis Management Structure
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#crisis-response-phases" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Crisis Response Phases
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#communication-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Communication Management
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#future-trends-in-supply-chain-risk-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Future Trends in Supply Chain Risk Management
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Future Trends in Supply Chain Risk Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#regionalization-and-reshoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Regionalization and Reshoring
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#circular-supply-chains" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Circular Supply Chains
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#autonomous-supply-chains" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Autonomous Supply Chains
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#climate-change-adaptation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Climate Change Adaptation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conclusion
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#self-assessment-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Self-Assessment Questions
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+  <nav class="md-path" aria-label="Navigation" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href="../.." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    Home
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Chapters
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="./" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    7. Resilience and Business Continuity
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+    <a href="https://github.com/Yarmoluk/supply-chain-risk-analyst/edit/main/docs/chapters/07-resilience-and-continuity/index.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="chapter-7-resilience-and-continuity">Chapter 7: Resilience and Continuity<a class="headerlink" href="#chapter-7-resilience-and-continuity" title="Permanent link">&para;</a></h1>
+<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
+<p>Despite best efforts at risk identification, assessment, and mitigation, disruptions will occur. The defining characteristic of resilient organizations is not avoiding all disruptions, but responding effectively and recovering rapidly when they happen. This chapter examines business continuity planning, resilience metrics, stress testing, crisis management, and emerging trends shaping the future of supply chain risk management.</p>
+<h2 id="understanding-supply-chain-resilience">Understanding Supply Chain Resilience<a class="headerlink" href="#understanding-supply-chain-resilience" title="Permanent link">&para;</a></h2>
+<p>Resilience represents the capacity to absorb disruptions, adapt to changing conditions, and return to desired performance levels rapidly.</p>
+<h3 id="resilience-vs-efficiency">Resilience vs Efficiency<a class="headerlink" href="#resilience-vs-efficiency" title="Permanent link">&para;</a></h3>
+<p>Traditional supply chain optimization focused on efficiency: lowest cost, minimal inventory, fastest throughput. Resilience often requires sacrificing some efficiency for robustness.</p>
+<table>
+<thead>
+<tr>
+<th>Dimension</th>
+<th>Efficiency Focus</th>
+<th>Resilience Focus</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Inventory</strong></td>
+<td>Minimize (reduce carrying costs)</td>
+<td>Buffer stocks for critical items</td>
+</tr>
+<tr>
+<td><strong>Suppliers</strong></td>
+<td>Single-source (volume discounts)</td>
+<td>Multi-source (redundancy)</td>
+</tr>
+<tr>
+<td><strong>Geography</strong></td>
+<td>Concentrate (economies of scale)</td>
+<td>Diversify (reduce regional risk)</td>
+</tr>
+<tr>
+<td><strong>Lead Time</strong></td>
+<td>Longer acceptable (lower cost)</td>
+<td>Shorter preferred (faster response)</td>
+</tr>
+<tr>
+<td><strong>Capacity</strong></td>
+<td>Run at high utilization</td>
+<td>Maintain surge capacity</td>
+</tr>
+<tr>
+<td><strong>Information</strong></td>
+<td>Need-to-know basis</td>
+<td>Broad visibility and sharing</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">The Resilience-Efficiency Frontier</p>
+<p>Organizations face trade-offs between resilience and efficiency. The optimal balance depends on industry, competitive positioning, and risk appetite. Recent disruptions have shifted many organizations toward greater resilience, accepting efficiency costs as insurance premiums against future shocks.</p>
+</div>
+<h3 id="components-of-resilience">Components of Resilience<a class="headerlink" href="#components-of-resilience" title="Permanent link">&para;</a></h3>
+<p><strong>Redundancy:</strong>
+- Backup suppliers, facilities, routes
+- Excess inventory and capacity
+- Parallel processes and systems
+- Provides buffer against failures</p>
+<p><strong>Flexibility:</strong>
+- Ability to change suppliers, routes, products quickly
+- Cross-trained workforce
+- Modular processes and equipment
+- Enables adaptation to new conditions</p>
+<p><strong>Visibility:</strong>
+- Early warning of emerging issues
+- Understanding of dependencies and vulnerabilities
+- Real-time status information
+- Supports rapid response</p>
+<p><strong>Collaboration:</strong>
+- Strong relationships with partners
+- Information sharing and joint planning
+- Aligned incentives
+- Enables coordinated response</p>
+<p><strong>Culture:</strong>
+- Risk awareness throughout organization
+- Empowerment to escalate concerns
+- Learning from incidents
+- Continuous improvement mindset</p>
+<pre class="mermaid"><code>graph TD
+    A[Supply Chain Resilience] --&gt; B[Anticipate]
+    A --&gt; C[Resist]
+    A --&gt; D[Respond]
+    A --&gt; E[Recover]
+    A --&gt; F[Adapt]
+
+    B --&gt; B1[Risk identification&lt;br/&gt;Scenario planning&lt;br/&gt;Early warning systems]
+    C --&gt; C1[Redundancy&lt;br/&gt;Inventory buffers&lt;br/&gt;Capacity reserves]
+    D --&gt; D1[Crisis management&lt;br/&gt;Decision protocols&lt;br/&gt;Communication plans]
+    E --&gt; E1[Workarounds&lt;br/&gt;Alternative sources&lt;br/&gt;Prioritization]
+    F --&gt; F1[Process improvements&lt;br/&gt;Design changes&lt;br/&gt;Network reconfiguration]</code></pre>
+<h2 id="business-continuity-planning">Business Continuity Planning<a class="headerlink" href="#business-continuity-planning" title="Permanent link">&para;</a></h2>
+<p>Business continuity planning (BCP) prepares organizations to maintain critical operations during disruptions.</p>
+<h3 id="bcp-process">BCP Process<a class="headerlink" href="#bcp-process" title="Permanent link">&para;</a></h3>
+<p><strong>1. Business Impact Analysis (BIA)</strong></p>
+<p>Identify critical processes and assess disruption consequences:</p>
+<ul>
+<li><strong>Critical functions</strong>: Which processes must continue?</li>
+<li><strong>Dependencies</strong>: What resources, suppliers, systems are required?</li>
+<li><strong>Impact over time</strong>: How do consequences escalate with duration?</li>
+<li><strong>Recovery priorities</strong>: What sequence should restoration follow?</li>
+</ul>
+<p><strong>Example BIA Output:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Critical?</th>
+<th>Max Tolerable Downtime</th>
+<th>Revenue Impact/Day</th>
+<th>Dependencies</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Production Line A</td>
+<td>Yes</td>
+<td>24 hours</td>
+<td>$2M</td>
+<td>Supplier X, Power, IT System</td>
+</tr>
+<tr>
+<td>Warehouse Operations</td>
+<td>Yes</td>
+<td>48 hours</td>
+<td>$500K</td>
+<td>Facility access, WMS, Staff</td>
+</tr>
+<tr>
+<td>Invoicing</td>
+<td>No</td>
+<td>1 week</td>
+<td>$0 (can backlog)</td>
+<td>Accounting system</td>
+</tr>
+</tbody>
+</table>
+<p><strong>2. Risk Assessment</strong></p>
+<p>For each critical function, identify threats:
+- Natural disasters affecting facilities or suppliers
+- Supplier failures or capacity issues
+- Transportation disruptions
+- IT system outages
+- Workforce unavailability</p>
+<p><strong>3. Strategy Development</strong></p>
+<p>Define how to maintain or rapidly restore critical functions:</p>
+<p><strong>Preventive Controls:</strong>
+- Facility hardening (earthquake resistance, flood protection)
+- Redundant suppliers and routes
+- Data backups and system redundancy
+- Safety stock and strategic inventory</p>
+<p><strong>Response Capabilities:</strong>
+- Alternative suppliers identified and qualified
+- Alternative production facilities arranged
+- Emergency logistics providers contracted
+- Manual workarounds documented</p>
+<p><strong>4. Plan Documentation</strong></p>
+<p>Create comprehensive, accessible continuity plans:</p>
+<ul>
+<li>Emergency contact information</li>
+<li>Decision-making authorities and escalation paths</li>
+<li>Step-by-step response procedures</li>
+<li>Alternative supplier and facility information</li>
+<li>Communication templates</li>
+<li>Resource inventories (equipment, inventory, key personnel)</li>
+</ul>
+<p><strong>5. Testing and Maintenance</strong></p>
+<p>Plans must be validated and kept current:</p>
+<ul>
+<li>Tabletop exercises walk through scenarios</li>
+<li>Simulation exercises test actual execution</li>
+<li>Supplier drills verify alternative sources work</li>
+<li>Annual plan reviews and updates</li>
+<li>Post-incident reviews capture lessons learned</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">BCP in Action: Pandemic Response</p>
+<p>A manufacturer's BCP identified workforce unavailability as a key risk. Pre-pandemic preparation included:</p>
+<ul>
+<li>Cross-training workers on multiple production lines</li>
+<li>Documented procedures for split-shift operations</li>
+<li>Remote work capabilities for non-production roles</li>
+<li>Alternative packaging suppliers qualified</li>
+</ul>
+<p>When COVID-19 hit, the company activated these plans immediately, maintaining 85% production capacity while competitors shut down completely. The investment in BCP paid for itself many times over through maintained revenue and market share gains.</p>
+</div>
+<h2 id="supply-chain-resilience-metrics">Supply Chain Resilience Metrics<a class="headerlink" href="#supply-chain-resilience-metrics" title="Permanent link">&para;</a></h2>
+<p>Measurement enables management. Organizations should track resilience using quantitative metrics.</p>
+<h3 id="key-resilience-metrics">Key Resilience Metrics<a class="headerlink" href="#key-resilience-metrics" title="Permanent link">&para;</a></h3>
+<p><strong>Time to Recovery (TTR):</strong>
+- Time from disruption to restoration of normal operations
+- Should measure actual recovery, not just workaround implementation
+- Track by disruption type and severity
+- Target: Continuous reduction</p>
+<p><strong>Time to Survive (TTS):</strong>
+- How long can operations continue if inputs stop?
+- Based on inventory levels, alternative sources, demand
+- Critical metric for assessing buffer adequacy
+- Target: Exceeds typical recovery time for key risks</p>
+<p><strong>Recovery Time Objective (RTO):</strong>
+- Target time for function restoration
+- Set based on business impact analysis
+- Different RTOs for different functions
+- Drives investment in resilience capabilities</p>
+<p><strong>Recovery Point Objective (RPO):</strong>
+- Maximum acceptable data loss (for IT systems)
+- Maximum acceptable production loss (for operations)
+- Guides backup frequency and inventory buffers</p>
+<p><strong>Supply Chain Disruption Index:</strong>
+- Aggregate measure of disruption frequency and severity
+- Track over time to assess resilience improvement
+- Benchmark against industry or competitors</p>
+<p><strong>Supplier Risk Score:</strong>
+- Composite measure of supplier vulnerability
+- Based on financial health, performance, geographic risk, single-source status
+- Weighted by criticality to operations
+- Guides risk mitigation priorities</p>
+<p><strong>Network Diversity:</strong>
+- Number of qualified suppliers per component
+- Geographic distribution of suppliers and facilities
+- Concentration indices (e.g., Herfindahl index)
+- Target: Reduced concentration over time</p>
+<p><strong>Inventory Coverage:</strong>
+- Days of supply on hand
+- Differentiated by component risk level
+- Tracks buffer adequacy
+- Balance against carrying cost</p>
+<h3 id="metric-implementation">Metric Implementation<a class="headerlink" href="#metric-implementation" title="Permanent link">&para;</a></h3>
+<p><strong>Define clearly:</strong>
+- Explicit calculation methodologies
+- Data sources and owners
+- Reporting frequency
+- Target levels and acceptable ranges</p>
+<p><strong>Track consistently:</strong>
+- Automated data collection where possible
+- Regular review and reporting
+- Trend analysis over time
+- Root cause analysis for changes</p>
+<p><strong>Act on insights:</strong>
+- Connect metrics to decision-making
+- Investigate when targets not met
+- Resource allocation based on metrics
+- Recognition for improvement</p>
+<div class="admonition tip">
+<p class="admonition-title">Balanced Scorecard</p>
+<p>Avoid over-focusing on single metrics. Use balanced scorecards capturing multiple dimensions: recovery speed, cost impact, customer service, employee safety, etc. Optimize for overall resilience, not individual metrics that might create perverse incentives.</p>
+</div>
+<h2 id="stress-testing">Stress Testing<a class="headerlink" href="#stress-testing" title="Permanent link">&para;</a></h2>
+<p>Stress testing evaluates supply chain performance under extreme but plausible scenarios, revealing vulnerabilities and validating mitigation strategies.</p>
+<h3 id="stress-test-scenarios">Stress Test Scenarios<a class="headerlink" href="#stress-test-scenarios" title="Permanent link">&para;</a></h3>
+<p><strong>Natural Disasters:</strong>
+- Major earthquake in key sourcing region
+- Hurricane affecting major port
+- Flooding disrupting transportation corridors
+- Wildfire threatening facilities</p>
+<p><strong>Geopolitical Events:</strong>
+- Trade war imposing tariffs on key imports
+- Sanctions restricting access to suppliers
+- Border closures or import restrictions
+- Political instability in sourcing countries</p>
+<p><strong>Economic Shocks:</strong>
+- Recession reducing demand 30%
+- Commodity price spike (2x increase)
+- Currency devaluation affecting costs
+- Credit market freeze limiting supplier financing</p>
+<p><strong>Operational Failures:</strong>
+- Major supplier bankruptcy
+- Quality crisis requiring product recall
+- IT system outage (ransomware)
+- Labor strike at key facility or port</p>
+<p><strong>Pandemic/Health Crisis:</strong>
+- Workforce availability reduced 40%
+- Facility closures mandated by government
+- Demand pattern shifts
+- Global logistics disruption</p>
+<h3 id="stress-testing-methodology">Stress Testing Methodology<a class="headerlink" href="#stress-testing-methodology" title="Permanent link">&para;</a></h3>
+<p><strong>1. Scenario Definition</strong>
+- Select scenario based on risk assessment
+- Define parameters (severity, duration, scope)
+- Ensure plausibility and relevance</p>
+<p><strong>2. Impact Modeling</strong>
+- Use digital twin or simulation tools
+- Trace effects through supply chain network
+- Quantify operational and financial impacts
+- Identify failure points and cascading effects</p>
+<p><strong>3. Response Simulation</strong>
+- Test planned mitigation strategies
+- Evaluate decision-making processes
+- Assess communication and coordination
+- Identify gaps in capabilities</p>
+<p><strong>4. Analysis and Learning</strong>
+- Document findings and vulnerabilities
+- Quantify residual risk after mitigation
+- Prioritize improvements
+- Update continuity plans</p>
+<p><strong>5. Iteration</strong>
+- Re-test after implementing improvements
+- Rotate through different scenarios
+- Increase severity to find breaking points
+- Regular schedule (annually for major scenarios)</p>
+<div class="admonition example">
+<p class="admonition-title">Stress Test Insight</p>
+<p>An automotive manufacturer stress-tested a scenario where their single-source semiconductor supplier suffered a fire. The test revealed that despite having 60 days of inventory (typical lead time), recovery would take 90+ days due to allocation competition and qualification time for alternatives. This insight drove immediate qualification of a second supplier and increase of strategic inventory to 90 days for this critical component.</p>
+</div>
+<h2 id="crisis-management">Crisis Management<a class="headerlink" href="#crisis-management" title="Permanent link">&para;</a></h2>
+<p>When disruptions occur, effective crisis management minimizes impact and accelerates recovery.</p>
+<h3 id="crisis-management-structure">Crisis Management Structure<a class="headerlink" href="#crisis-management-structure" title="Permanent link">&para;</a></h3>
+<p><strong>Crisis Management Team (CMT):</strong>
+- Senior leadership from key functions (Operations, Procurement, Finance, Legal, Communications)
+- Clear decision-making authority
+- Dedicated communication channels
+- Rapid assembly capability (24-hour activation)</p>
+<p><strong>Roles and Responsibilities:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Role</th>
+<th>Responsibilities</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Crisis Manager</strong></td>
+<td>Overall coordination, strategic decisions, external communication</td>
+</tr>
+<tr>
+<td><strong>Operations Lead</strong></td>
+<td>Production and facility status, workarounds, capacity allocation</td>
+</tr>
+<tr>
+<td><strong>Supply Chain Lead</strong></td>
+<td>Supplier status, alternative sources, logistics coordination</td>
+</tr>
+<tr>
+<td><strong>Finance Lead</strong></td>
+<td>Cost assessment, financial decisions, insurance claims</td>
+</tr>
+<tr>
+<td><strong>Communications Lead</strong></td>
+<td>Internal and external messaging, stakeholder management</td>
+</tr>
+<tr>
+<td><strong>Legal/Compliance Lead</strong></td>
+<td>Regulatory compliance, contractual issues, liability</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Decision Protocols:</strong>
+- Pre-defined authority levels for different decision types
+- Escalation thresholds and processes
+- Documentation requirements
+- Review and validation procedures</p>
+<h3 id="crisis-response-phases">Crisis Response Phases<a class="headerlink" href="#crisis-response-phases" title="Permanent link">&para;</a></h3>
+<pre class="mermaid"><code>graph LR
+    A[Detection] --&gt; B[Assessment]
+    B --&gt; C[Activation]
+    C --&gt; D[Response]
+    D --&gt; E[Recovery]
+    E --&gt; F[Review]
+
+    A --&gt; A1[Identify disruption&lt;br/&gt;Gather initial information]
+    B --&gt; B1[Assess scope and impact&lt;br/&gt;Determine criticality]
+    C --&gt; C1[Activate CMT&lt;br/&gt;Mobilize resources]
+    D --&gt; D1[Execute contingency plans&lt;br/&gt;Communicate with stakeholders]
+    E --&gt; E1[Restore normal operations&lt;br/&gt;Transition from CMT]
+    F --&gt; F1[Lessons learned&lt;br/&gt;Update plans]</code></pre>
+<p><strong>Detection and Assessment (0-4 hours):</strong>
+- Identify that disruption has occurred
+- Gather initial information about scope and severity
+- Assess potential business impact
+- Determine if crisis activation warranted</p>
+<p><strong>Activation (4-12 hours):</strong>
+- Assemble crisis management team
+- Establish communication channels and command center
+- Conduct detailed impact assessment
+- Develop initial response strategy</p>
+<p><strong>Response (Days-Weeks):</strong>
+- Execute contingency plans
+- Implement workarounds and alternatives
+- Communicate with customers, suppliers, employees, stakeholders
+- Monitor situation and adjust response
+- Coordinate across functions and partners</p>
+<p><strong>Recovery (Weeks-Months):</strong>
+- Restore normal operations
+- Transition from crisis mode to business-as-usual
+- Address backlog and catch-up activities
+- Monitor for secondary effects</p>
+<p><strong>Review (Post-Recovery):</strong>
+- Conduct after-action review
+- Document lessons learned
+- Update risk assessments and continuity plans
+- Implement improvements
+- Recognize and reward response team</p>
+<h3 id="communication-management">Communication Management<a class="headerlink" href="#communication-management" title="Permanent link">&para;</a></h3>
+<p>Effective communication is critical during crises:</p>
+<p><strong>Internal Communication:</strong>
+- Regular updates to employees
+- Specific guidance for affected teams
+- Channels for questions and concerns
+- Recognition of extra efforts</p>
+<p><strong>Customer Communication:</strong>
+- Proactive notification of impacts
+- Transparent information about recovery timeline
+- Alternative solutions or options
+- Regular status updates until resolved</p>
+<p><strong>Supplier Communication:</strong>
+- Coordinate on workarounds and alternatives
+- Share information to enable mutual support
+- Maintain relationships under stress
+- Appreciation for extraordinary efforts</p>
+<p><strong>External Stakeholders:</strong>
+- Investors: Financial impact and response
+- Regulators: Compliance and safety assurance
+- Media: Controlled messaging (if public interest)
+- Community: Local impact and employment</p>
+<div class="admonition warning">
+<p class="admonition-title">Communication Pitfalls</p>
+<ul>
+<li>Over-promising recovery timelines (erodes trust when missed)</li>
+<li>Lack of transparency (fuels speculation and anxiety)</li>
+<li>Inconsistent messages across channels</li>
+<li>Neglecting internal communication (employees are ambassadors)</li>
+<li>Blame shifting rather than problem-solving</li>
+</ul>
+</div>
+<h2 id="future-trends-in-supply-chain-risk-management">Future Trends in Supply Chain Risk Management<a class="headerlink" href="#future-trends-in-supply-chain-risk-management" title="Permanent link">&para;</a></h2>
+<p>Several emerging trends will shape supply chain risk management in coming years.</p>
+<h3 id="regionalization-and-reshoring">Regionalization and Reshoring<a class="headerlink" href="#regionalization-and-reshoring" title="Permanent link">&para;</a></h3>
+<p>COVID-19 exposed vulnerabilities of globally concentrated supply chains. Organizations are reconsidering geographic strategies:</p>
+<p><strong>Drivers:</strong>
+- Geopolitical tensions (US-China trade, regional conflicts)
+- Desire for shorter, more controllable supply chains
+- Government incentives for local production
+- Total cost reassessment (hidden costs of global sourcing)</p>
+<p><strong>Implications:</strong>
+- Higher production costs but lower risk
+- Need to develop regional supplier bases
+- Investment in local manufacturing capabilities
+- Trade-off analysis becomes more complex</p>
+<h3 id="circular-supply-chains">Circular Supply Chains<a class="headerlink" href="#circular-supply-chains" title="Permanent link">&para;</a></h3>
+<p>Sustainability pressures and resource constraints drive circular economy models:</p>
+<p><strong>Characteristics:</strong>
+- Design for reuse, remanufacturing, recycling
+- Reverse logistics for product returns
+- Material recovery and recirculation
+- Reduced virgin material dependency</p>
+<p><strong>Risk Implications:</strong>
+- New dependencies (collection infrastructure, reprocessing capability)
+- Quality variability in recycled materials
+- Regulatory compliance complexity
+- Need for traceability across product lifecycles</p>
+<h3 id="autonomous-supply-chains">Autonomous Supply Chains<a class="headerlink" href="#autonomous-supply-chains" title="Permanent link">&para;</a></h3>
+<p>AI, automation, and robotics enable self-managing supply chain capabilities:</p>
+<p><strong>Technologies:</strong>
+- Autonomous vehicles for transportation
+- Warehouse robots and automation
+- AI-driven planning and optimization
+- Smart contracts for automated execution</p>
+<p><strong>Benefits:</strong>
+- Reduced human error
+- 24/7 operations
+- Rapid response to changes
+- Lower labor dependency (addresses workforce risks)</p>
+<p><strong>New Risks:</strong>
+- Cybersecurity vulnerabilities
+- Technology failures and edge cases
+- Workforce transition challenges
+- Regulatory and liability questions</p>
+<h3 id="climate-change-adaptation">Climate Change Adaptation<a class="headerlink" href="#climate-change-adaptation" title="Permanent link">&para;</a></h3>
+<p>Climate change creates both chronic and acute supply chain risks:</p>
+<p><strong>Physical Risks:</strong>
+- Increased frequency and severity of natural disasters
+- Shifting agricultural zones
+- Water scarcity affecting production
+- Heat affecting worker productivity and equipment</p>
+<p><strong>Transition Risks:</strong>
+- Carbon pricing and emissions regulations
+- Investor and customer pressure for sustainability
+- Stranded assets (fossil fuel infrastructure)
+- Supply chain decarbonization requirements</p>
+<p><strong>Adaptation Strategies:</strong>
+- Climate risk assessment in sourcing decisions
+- Facility hardening and redundancy
+- Sustainable sourcing requirements
+- Transparent emissions tracking and reporting</p>
+<h2 id="conclusion">Conclusion<a class="headerlink" href="#conclusion" title="Permanent link">&para;</a></h2>
+<p>Supply chain resilience represents the culmination of risk identification, assessment, mitigation, and continuous improvement. Resilient organizations build redundancy, flexibility, visibility, and collaboration into their networks. Business continuity planning prepares for disruptions through analysis, strategy development, and testing. Metrics enable measurement and management of resilience. Stress testing reveals vulnerabilities before real crises. Crisis management structures and protocols enable effective response. Adaptive capacity allows organizations to learn and evolve.</p>
+<p>The future of supply chain risk management will involve balancing efficiency with resilience, incorporating sustainability alongside traditional performance metrics, and leveraging technology for visibility and intelligence. Organizations that excel at supply chain risk management will transform disruptions from existential threats into competitive advantages, maintaining customer service and market position while competitors struggle.</p>
+<p>ISO 28000 provides the framework, but true resilience comes from organizational commitment, cross-functional collaboration, continuous learning, and the courage to invest in capabilities that may not be used frequently but prove invaluable when needed.</p>
+<h2 id="self-assessment-questions">Self-Assessment Questions<a class="headerlink" href="#self-assessment-questions" title="Permanent link">&para;</a></h2>
+<ol>
+<li>What is the difference between supply chain efficiency and resilience?</li>
+<li>What are the five key components of business continuity planning?</li>
+<li>How does Time to Survive (TTS) differ from Time to Recovery (TTR)?</li>
+<li>What are the six phases of crisis response?</li>
+<li>How might climate change affect supply chain risk management strategies?</li>
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../06-technology-and-visibility/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Content">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Content
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../../glossary/" class="md-footer__link md-footer__link--next" aria-label="Next: Glossary">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Glossary
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 Daniel Yarmoluk | All rights reserved.
+    </div>
+  
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/Yarmoluk/supply-chain-risk-analyst" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["content.code.copy", "navigation.expand", "navigation.path", "navigation.prune", "navigation.indexes", "toc.follow", "navigation.top", "navigation.footer", "content.action.edit"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../js/extra.js"></script>
+      
+    
+  </body>
+</html>

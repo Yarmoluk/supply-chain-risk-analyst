@@ -1,0 +1,1825 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A guide to supply chain risk management based on ISO 28000 and industry best practices.">
+      
+      
+        <meta name="author" content="Daniel Yarmoluk">
+      
+      
+        <link rel="canonical" href="https://yarmoluk.github.io/supply-chain-risk-analyst/chapters/03-iso-28000-framework/">
+      
+      
+        <link rel="prev" href="../02-risk-identification/">
+      
+      
+        <link rel="next" href="../04-supplier-risk-management/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../img/favicon.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>Content - Supply Chain Risk Analyst</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="cyan">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#chapter-3-iso-28000-framework" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Supply Chain Risk Analyst" class="md-header__button md-logo" aria-label="Supply Chain Risk Analyst" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Supply Chain Risk Analyst
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Content
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="cyan"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="cyan"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Yarmoluk/supply-chain-risk-analyst" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Supply Chain Risk Analyst" class="md-nav__button md-logo" aria-label="Supply Chain Risk Analyst" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Supply Chain Risk Analyst
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Yarmoluk/supply-chain-risk-analyst" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course-description/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Course Description
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapters
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Chapters
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../01-supply-chain-risk-foundations/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Supply Chain Risk Foundations
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../02-risk-identification/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Risk Identification and Assessment
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="./" class="md-nav__link md-nav__link--active">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. ISO 28000 Framework and Standards
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    3. ISO 28000 Framework and Standards
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../04-supplier-risk-management/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. Supplier Risk Management
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../05-logistics-and-disruption/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. Logistics and Disruption Planning
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../06-technology-and-visibility/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. Technology and Supply Chain Visibility
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../07-resilience-and-continuity/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7. Resilience and Business Continuity
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Glossary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../references/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    References
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../license/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    License
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contact/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contact
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Introduction
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iso-28000-structure-and-scope" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ISO 28000 Structure and Scope
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ISO 28000 Structure and Scope">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#core-principles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Core Principles
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#standard-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Standard Components
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#security-management-system-fundamentals" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Security Management System Fundamentals
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Security Management System Fundamentals">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#security-policy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Security Policy
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#security-risk-assessment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Security Risk Assessment
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pdca-cycle-application" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PDCA Cycle Application
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="PDCA Cycle Application">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#plan-phase" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Plan Phase
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#do-phase" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Do Phase
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#check-phase" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Check Phase
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#act-phase" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Act Phase
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iso-28000-certification-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ISO 28000 Certification Process
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ISO 28000 Certification Process">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#certification-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Certification Steps
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#relationship-to-other-iso-standards" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Relationship to Other ISO Standards
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Relationship to Other ISO Standards">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#iso-31000-risk-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ISO 31000: Risk Management
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iso-9001-quality-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ISO 9001: Quality Management
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iso-45001-occupational-health-and-safety" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ISO 45001: Occupational Health and Safety
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iso-27001-information-security" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ISO 27001: Information Security
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementation-best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Implementation Best Practices
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Implementation Best Practices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#top-management-engagement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Top Management Engagement
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#risk-based-resource-allocation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Risk-Based Resource Allocation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cross-functional-collaboration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cross-Functional Collaboration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#security-culture-development" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Security Culture Development
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integration-with-existing-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Integration with Existing Systems
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conclusion
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#self-assessment-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Self-Assessment Questions
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+  <nav class="md-path" aria-label="Navigation" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href="../.." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    Home
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Chapters
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="./" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    3. ISO 28000 Framework and Standards
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+    <a href="https://github.com/Yarmoluk/supply-chain-risk-analyst/edit/main/docs/chapters/03-iso-28000-framework/index.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="chapter-3-iso-28000-framework">Chapter 3: ISO 28000 Framework<a class="headerlink" href="#chapter-3-iso-28000-framework" title="Permanent link">&para;</a></h1>
+<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
+<p>ISO 28000 provides the international standard for security management systems in supply chains. Published by the International Organization for Standardization, it establishes requirements for assessing and managing security risks across the entire supply chain. This chapter examines the standard's structure, implementation methodology, and relationship to other management system standards.</p>
+<h2 id="iso-28000-structure-and-scope">ISO 28000 Structure and Scope<a class="headerlink" href="#iso-28000-structure-and-scope" title="Permanent link">&para;</a></h2>
+<p>ISO 28000:2007, revised in 2022, specifies requirements for a security management system applicable to organizations of all sizes involved in any aspect of the supply chain. The standard applies to manufacturing, service, storage, and transportation organizations at any production or supply stage.</p>
+<h3 id="core-principles">Core Principles<a class="headerlink" href="#core-principles" title="Permanent link">&para;</a></h3>
+<p>The standard is built on several fundamental principles:</p>
+<ol>
+<li><strong>Risk-based approach</strong>: Security measures proportional to assessed risks</li>
+<li><strong>Process methodology</strong>: Systematic, repeatable procedures</li>
+<li><strong>Continual improvement</strong>: Ongoing enhancement of security performance</li>
+<li><strong>Management commitment</strong>: Leadership engagement and resource allocation</li>
+<li><strong>Competence and awareness</strong>: Trained personnel understanding their security roles</li>
+</ol>
+<div class="admonition info">
+<p class="admonition-title">Standard Definition</p>
+<p>ISO 28000 defines a security management system as "that part of the overall management system, based on a business risk approach, to establish and maintain security."</p>
+</div>
+<h3 id="standard-components">Standard Components<a class="headerlink" href="#standard-components" title="Permanent link">&para;</a></h3>
+<p>The standard is organized into key sections:</p>
+<table>
+<thead>
+<tr>
+<th>Section</th>
+<th>Content</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Context of the Organization</strong></td>
+<td>Understanding organizational and supply chain context</td>
+<td>Define scope and boundaries</td>
+</tr>
+<tr>
+<td><strong>Leadership</strong></td>
+<td>Management commitment, policy, roles</td>
+<td>Establish governance</td>
+</tr>
+<tr>
+<td><strong>Planning</strong></td>
+<td>Risk assessment, objectives, planning</td>
+<td>Identify and prioritize security needs</td>
+</tr>
+<tr>
+<td><strong>Support</strong></td>
+<td>Resources, competence, communication, documentation</td>
+<td>Enable implementation</td>
+</tr>
+<tr>
+<td><strong>Operation</strong></td>
+<td>Operational planning, security controls</td>
+<td>Execute security measures</td>
+</tr>
+<tr>
+<td><strong>Performance Evaluation</strong></td>
+<td>Monitoring, measurement, audit, review</td>
+<td>Assess effectiveness</td>
+</tr>
+<tr>
+<td><strong>Improvement</strong></td>
+<td>Nonconformity, corrective action, continual improvement</td>
+<td>Drive enhancement</td>
+</tr>
+</tbody>
+</table>
+<h2 id="security-management-system-fundamentals">Security Management System Fundamentals<a class="headerlink" href="#security-management-system-fundamentals" title="Permanent link">&para;</a></h2>
+<p>A security management system (SMS) provides systematic framework for managing supply chain security risks. Unlike ad-hoc security measures, an SMS integrates security into organizational processes and culture.</p>
+<h3 id="security-policy">Security Policy<a class="headerlink" href="#security-policy" title="Permanent link">&para;</a></h3>
+<p>The security policy articulates organizational commitment to supply chain security. It should:</p>
+<ul>
+<li>State the purpose and scope of security management</li>
+<li>Include commitment to meet legal and regulatory requirements</li>
+<li>Provide framework for setting security objectives</li>
+<li>Include commitment to continual improvement</li>
+<li>Be communicated throughout the organization and to relevant interested parties</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Sample Policy Statement</p>
+<p>"XYZ Corporation commits to protecting the security and integrity of our supply chain through systematic risk management, compliance with international standards, and continual improvement of our security management system."</p>
+</div>
+<h3 id="security-risk-assessment">Security Risk Assessment<a class="headerlink" href="#security-risk-assessment" title="Permanent link">&para;</a></h3>
+<p>ISO 28000 requires organizations to establish, implement, and maintain processes for assessing security risks. This includes:</p>
+<p><strong>Identifying threats and vulnerabilities</strong>
+- Physical security threats (theft, tampering, terrorism)
+- Cyber security threats (hacking, data breaches, ransomware)
+- Operational threats (fraud, counterfeiting, unauthorized access)
+- Natural and environmental threats</p>
+<p><strong>Assessing likelihood and consequences</strong>
+- Probability of threat occurrence
+- Potential impact on operations, reputation, compliance
+- Velocity and cascading effects</p>
+<p><strong>Determining risk acceptability</strong>
+- Risk appetite and tolerance levels
+- Prioritization criteria
+- Resource allocation decisions</p>
+<p><strong>Identifying risk treatment options</strong>
+- Avoid, reduce, transfer, or accept risks
+- Preventive vs detective vs corrective controls
+- Cost-benefit analysis of treatment options</p>
+<h2 id="pdca-cycle-application">PDCA Cycle Application<a class="headerlink" href="#pdca-cycle-application" title="Permanent link">&para;</a></h2>
+<p>ISO 28000 adopts the Plan-Do-Check-Act (PDCA) cycle for continual improvement. This methodology enables systematic enhancement of security performance.</p>
+<pre class="mermaid"><code>graph LR
+    A[Plan] --&gt; B[Do]
+    B --&gt; C[Check]
+    C --&gt; D[Act]
+    D --&gt; A
+
+    A1[Establish security objectives&lt;br/&gt;Identify risks&lt;br/&gt;Design controls] --&gt; A
+    B1[Implement controls&lt;br/&gt;Train personnel&lt;br/&gt;Execute procedures] --&gt; B
+    C1[Monitor performance&lt;br/&gt;Conduct audits&lt;br/&gt;Review effectiveness] --&gt; C
+    D1[Corrective actions&lt;br/&gt;Process improvements&lt;br/&gt;Update controls] --&gt; D</code></pre>
+<h3 id="plan-phase">Plan Phase<a class="headerlink" href="#plan-phase" title="Permanent link">&para;</a></h3>
+<p><strong>Establish security objectives</strong>: Define measurable targets aligned with organizational strategy and risk assessment outcomes.</p>
+<p><strong>Examples:</strong>
+- Reduce security incidents by 25% within 12 months
+- Achieve 100% supplier security certification within 24 months
+- Implement access controls at all warehouses by Q3</p>
+<p><strong>Develop security plan</strong>: Document how objectives will be achieved, including:
+- Specific security controls and procedures
+- Resource requirements (budget, personnel, technology)
+- Responsibilities and authorities
+- Timeline and milestones
+- Performance indicators</p>
+<h3 id="do-phase">Do Phase<a class="headerlink" href="#do-phase" title="Permanent link">&para;</a></h3>
+<p><strong>Implement security controls</strong>: Deploy planned measures across operations:</p>
+<ul>
+<li>Physical security (access controls, surveillance, secure storage)</li>
+<li>Personnel security (background checks, training, awareness programs)</li>
+<li>Information security (encryption, access management, data protection)</li>
+<li>Transportation security (route planning, driver verification, tracking)</li>
+<li>Supplier security (qualification criteria, audits, contractual requirements)</li>
+</ul>
+<p><strong>Ensure competence</strong>: Train personnel on security procedures and their roles in the SMS.</p>
+<p><strong>Maintain documentation</strong>: Record evidence of implementation for audit and review.</p>
+<h3 id="check-phase">Check Phase<a class="headerlink" href="#check-phase" title="Permanent link">&para;</a></h3>
+<p><strong>Monitor and measure</strong>: Track security performance against objectives:</p>
+<ul>
+<li>Incident frequency and severity</li>
+<li>Security audit findings</li>
+<li>Compliance with procedures</li>
+<li>Cost of security measures</li>
+<li>Effectiveness of controls</li>
+</ul>
+<p><strong>Conduct internal audits</strong>: Systematic examination of SMS implementation:
+- Assess conformity with ISO 28000 requirements
+- Evaluate effectiveness of security controls
+- Identify nonconformities and improvement opportunities
+- Verify documentation and records</p>
+<p><strong>Management review</strong>: Senior leadership periodically evaluates SMS:
+- Overall security performance trends
+- Audit results and corrective actions
+- Changes in internal/external context
+- Resource adequacy
+- Improvement opportunities</p>
+<h3 id="act-phase">Act Phase<a class="headerlink" href="#act-phase" title="Permanent link">&para;</a></h3>
+<p><strong>Address nonconformities</strong>: When security requirements are not met:
+- Investigate root causes
+- Implement corrective actions
+- Verify effectiveness of corrections
+- Update procedures to prevent recurrence</p>
+<p><strong>Continual improvement</strong>: Systematically enhance security performance:
+- Implement lessons learned from incidents
+- Adopt emerging security technologies
+- Refine risk assessment methodologies
+- Enhance training programs
+- Update controls based on threat evolution</p>
+<h2 id="iso-28000-certification-process">ISO 28000 Certification Process<a class="headerlink" href="#iso-28000-certification-process" title="Permanent link">&para;</a></h2>
+<p>Organizations may seek third-party certification to demonstrate conformity with ISO 28000. Certification provides credibility with customers, regulators, and business partners.</p>
+<h3 id="certification-steps">Certification Steps<a class="headerlink" href="#certification-steps" title="Permanent link">&para;</a></h3>
+<p><strong>1. Gap Analysis</strong>
+- Compare current practices to ISO 28000 requirements
+- Identify areas requiring development or enhancement
+- Estimate resources and timeline for implementation</p>
+<p><strong>2. SMS Development</strong>
+- Design security management system addressing all standard requirements
+- Document policies, procedures, and work instructions
+- Allocate resources and assign responsibilities</p>
+<p><strong>3. Implementation</strong>
+- Deploy security controls across operations
+- Train personnel on new procedures
+- Generate records demonstrating conformity</p>
+<p><strong>4. Internal Audit</strong>
+- Conduct comprehensive audit of SMS implementation
+- Address identified nonconformities
+- Verify readiness for certification audit</p>
+<p><strong>5. Certification Audit (Stage 1)</strong>
+- Documentation review by certification body
+- Assessment of SMS design and readiness
+- Identification of any documentation gaps</p>
+<p><strong>6. Certification Audit (Stage 2)</strong>
+- On-site assessment of SMS implementation
+- Verification of effective operation
+- Review of objective evidence</p>
+<p><strong>7. Certification Decision</strong>
+- Certification body evaluates audit findings
+- Issues certificate if conformity demonstrated
+- Defines surveillance audit schedule</p>
+<p><strong>8. Surveillance and Recertification</strong>
+- Annual surveillance audits maintain certification
+- Full recertification every three years
+- Continual conformity and improvement demonstrated</p>
+<div class="admonition tip">
+<p class="admonition-title">Certification Benefits</p>
+<ul>
+<li>Enhanced credibility with stakeholders</li>
+<li>Competitive advantage in bid processes</li>
+<li>Reduced insurance premiums</li>
+<li>Improved security culture</li>
+<li>Framework for continual improvement</li>
+</ul>
+</div>
+<h2 id="relationship-to-other-iso-standards">Relationship to Other ISO Standards<a class="headerlink" href="#relationship-to-other-iso-standards" title="Permanent link">&para;</a></h2>
+<p>ISO 28000 integrates with other management system standards, enabling unified approaches.</p>
+<h3 id="iso-31000-risk-management">ISO 31000: Risk Management<a class="headerlink" href="#iso-31000-risk-management" title="Permanent link">&para;</a></h3>
+<p>ISO 31000 provides general risk management principles applicable across all organizational contexts. ISO 28000 applies these principles specifically to supply chain security.</p>
+<p><strong>Integration points:</strong>
+- ISO 28000 security risk assessment aligns with ISO 31000 risk management process
+- Both use similar risk evaluation criteria
+- Organizations can maintain integrated risk registers covering all risk types</p>
+<h3 id="iso-9001-quality-management">ISO 9001: Quality Management<a class="headerlink" href="#iso-9001-quality-management" title="Permanent link">&para;</a></h3>
+<p>ISO 9001 establishes requirements for quality management systems. Both standards share similar structure and improvement methodology.</p>
+<p><strong>Common elements:</strong>
+- PDCA cycle approach
+- Process-based thinking
+- Management responsibility
+- Competence and training requirements
+- Documentation and records
+- Internal audit and management review
+- Continual improvement</p>
+<p>Organizations often integrate quality and security management, avoiding duplication while ensuring comprehensive coverage.</p>
+<h3 id="iso-45001-occupational-health-and-safety">ISO 45001: Occupational Health and Safety<a class="headerlink" href="#iso-45001-occupational-health-and-safety" title="Permanent link">&para;</a></h3>
+<p>ISO 45001 addresses worker health and safety. Supply chain security often intersects with safety considerations.</p>
+<p><strong>Overlapping areas:</strong>
+- Incident investigation and corrective action
+- Training and competence
+- Emergency preparedness
+- Contractor management
+- Hazard identification (security threats as hazards)</p>
+<h3 id="iso-27001-information-security">ISO 27001: Information Security<a class="headerlink" href="#iso-27001-information-security" title="Permanent link">&para;</a></h3>
+<p>ISO 27001 focuses on information security management. Supply chain security increasingly involves digital systems and data protection.</p>
+<p><strong>Complementary relationship:</strong>
+- ISO 28000 addresses broader supply chain security
+- ISO 27001 provides detailed information security controls
+- Organizations may reference ISO 27001 controls within ISO 28000 SMS
+- Cyber threats require both standards' consideration</p>
+<h2 id="implementation-best-practices">Implementation Best Practices<a class="headerlink" href="#implementation-best-practices" title="Permanent link">&para;</a></h2>
+<p>Successful ISO 28000 implementation requires strategic approach and organizational commitment.</p>
+<h3 id="top-management-engagement">Top Management Engagement<a class="headerlink" href="#top-management-engagement" title="Permanent link">&para;</a></h3>
+<p>Leadership must actively champion the SMS:
+- Allocate adequate resources
+- Communicate importance to organization
+- Participate in management reviews
+- Make security-informed decisions
+- Hold personnel accountable for security performance</p>
+<h3 id="risk-based-resource-allocation">Risk-Based Resource Allocation<a class="headerlink" href="#risk-based-resource-allocation" title="Permanent link">&para;</a></h3>
+<p>Focus resources on highest-priority risks:
+- Use risk assessment to guide investment
+- Implement cost-effective controls
+- Avoid over-engineering low-risk areas
+- Reassess priorities as threats evolve</p>
+<h3 id="cross-functional-collaboration">Cross-Functional Collaboration<a class="headerlink" href="#cross-functional-collaboration" title="Permanent link">&para;</a></h3>
+<p>Security management requires input from multiple disciplines:
+- Procurement understands supplier risks
+- Operations manages facility and process security
+- IT addresses cyber threats
+- Legal ensures regulatory compliance
+- Finance evaluates cost-benefit trade-offs</p>
+<h3 id="security-culture-development">Security Culture Development<a class="headerlink" href="#security-culture-development" title="Permanent link">&para;</a></h3>
+<p>Embed security awareness throughout organization:
+- Regular training and communication
+- Recognition of security-conscious behaviors
+- Clear reporting mechanisms for concerns
+- Learning from incidents without blame
+- Leadership modeling security commitment</p>
+<h3 id="integration-with-existing-systems">Integration with Existing Systems<a class="headerlink" href="#integration-with-existing-systems" title="Permanent link">&para;</a></h3>
+<p>Leverage existing management systems:
+- Align security and quality audits
+- Integrate documentation systems
+- Coordinate training programs
+- Combine management review meetings
+- Unified corrective action processes</p>
+<h2 id="conclusion">Conclusion<a class="headerlink" href="#conclusion" title="Permanent link">&para;</a></h2>
+<p>ISO 28000 provides comprehensive framework for managing supply chain security risks. Its structured approach, based on the PDCA cycle, enables organizations to systematically assess threats, implement proportional controls, and continually improve security performance. Certification demonstrates commitment to international best practices and provides competitive advantages.</p>
+<p>Integration with other ISO standards enables efficient, unified management systems. Successful implementation requires top management commitment, risk-based resource allocation, cross-functional collaboration, and security culture development.</p>
+<p>The next chapter examines specific approaches to managing supplier-related risks, a critical component of supply chain security.</p>
+<h2 id="self-assessment-questions">Self-Assessment Questions<a class="headerlink" href="#self-assessment-questions" title="Permanent link">&para;</a></h2>
+<ol>
+<li>What are the seven main sections of the ISO 28000 standard?</li>
+<li>How does the PDCA cycle support continual improvement?</li>
+<li>What is the difference between Stage 1 and Stage 2 certification audits?</li>
+<li>How do ISO 28000 and ISO 31000 relate to each other?</li>
+<li>Why is top management engagement critical for SMS success?</li>
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../02-risk-identification/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Content">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Content
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../04-supplier-risk-management/" class="md-footer__link md-footer__link--next" aria-label="Next: Content">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Content
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 Daniel Yarmoluk | All rights reserved.
+    </div>
+  
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/Yarmoluk/supply-chain-risk-analyst" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["content.code.copy", "navigation.expand", "navigation.path", "navigation.prune", "navigation.indexes", "toc.follow", "navigation.top", "navigation.footer", "content.action.edit"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../js/extra.js"></script>
+      
+    
+  </body>
+</html>
