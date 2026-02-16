@@ -1,83 +1,78 @@
 # Supply Chain Risk Analyst
 
+AI-powered intelligent textbook for supply chain risk management based on ISO 28000.
+
 [![GitHub Pages](https://img.shields.io/badge/docs-live-brightgreen)](https://yarmoluk.github.io/supply-chain-risk-analyst/)
 [![Built with MkDocs Material](https://img.shields.io/badge/Built%20with-MkDocs%20Material-526CFE)](https://squidfunk.github.io/mkdocs-material/)
 [![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 
-A comprehensive guide to supply chain risk management based on ISO 28000 standards, covering risk identification, assessment, mitigation strategies, and business continuity planning.
+## Overview
 
-## Live Site
+Comprehensive AI expert system covering supply chain risk identification, assessment, and mitigation aligned with ISO 28000 and ISO 31000 frameworks. Addresses operational, financial, geopolitical, environmental, and cyber risk categories with practical frameworks for supplier management, logistics disruption planning, and business continuity.
 
-**[View the Guide](https://yarmoluk.github.io/supply-chain-risk-analyst/)**
+**[View the Live Site](https://yarmoluk.github.io/supply-chain-risk-analyst/)**
 
-## Features
+## Capabilities
 
-- **7 comprehensive chapters** covering supply chain risk management foundations through resilience strategies
-- **45+ glossary terms** with detailed supply chain and risk management definitions
-- **18 FAQs** addressing common supply chain risk challenges
-- **25 authoritative references** including ISO standards and industry research
-- **12 Mermaid diagrams** visualizing risk frameworks, processes, and relationships
-- **Practical risk assessment frameworks** and mitigation strategies
+### Risk Management Frameworks
+- ISO 28000 security management system implementation and PDCA cycle
+- FMEA (Failure Mode and Effects Analysis) with RPN calculations
+- Risk matrices, scenario analysis, and STRIDE threat modeling
+- Supplier scorecards and financial health assessment (Altman Z-Score)
 
-## Chapters
+### Supply Chain Resilience
+- Single-source vs. multi-source sourcing strategies
+- Inventory buffering and safety stock optimization
+- Nearshoring vs. offshoring decision frameworks
+- Business continuity planning with RTO/RPO metrics
 
-| Chapter | Topic |
-|---------|-------|
+### Technology and Visibility
+- IoT sensors, blockchain traceability, and AI/ML demand forecasting
+- Digital twins and supply chain control towers
+- Real-time risk monitoring and alert triage systems
+
+### Reference Architecture
+- 45+ glossary terms covering supply chain and risk management
+- 18 FAQs spanning Bloom's taxonomy levels
+- 25 references including ISO standards, McKinsey, and Gartner research
+- 13+ Mermaid diagrams visualizing frameworks, processes, and decision trees
+
+## Content Scope
+
+| Chapter | Domain |
+|---------|--------|
 | 1 | Supply Chain Risk Foundations |
 | 2 | Risk Identification and Assessment |
-| 3 | Supplier Risk Management |
-| 4 | Operational Risk Management |
-| 5 | Technology and Cybersecurity Risks |
-| 6 | Regulatory and Compliance Risks |
+| 3 | ISO 28000 Framework and Standards |
+| 4 | Supplier Risk Management |
+| 5 | Logistics and Disruption Planning |
+| 6 | Technology and Supply Chain Visibility |
 | 7 | Resilience and Business Continuity |
+
+## Results
+
+- 16,500+ words of professional-depth supply chain risk content
+- 13+ Mermaid process diagrams and 14+ data tables
+- Real-world case studies: COVID-19, Suez Canal blockage, semiconductor shortage
+- Built without supply chain management or logistics background
 
 ## Technology Stack
 
-- **MkDocs Material** - Modern documentation framework
-- **Python** - Site generation and tooling
-- **Markdown** - Content authoring
-- **GitHub Pages** - Hosting and deployment
-- **Mermaid.js** - Interactive diagrams and process visualizations
+- Claude AI with structured domain knowledge extraction
+- MkDocs Material with custom dark theme
+- Mermaid.js process and decision diagrams
+- GitHub Pages deployment
 
-## Getting Started
+## Note on IP Protection
 
-### Prerequisites
+This repository contains the published educational content. The underlying knowledge architecture, content generation methodology, and system design patterns are proprietary.
 
-- Python 3.8 or higher
-- pip (Python package manager)
+## Contact
 
-### Local Development
+**Daniel Yarmoluk**
+AI Transformation Leader
+[LinkedIn](https://www.linkedin.com/in/danyarmoluk/)
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/Yarmoluk/supply-chain-risk-analyst.git
-   cd supply-chain-risk-analyst
-   ```
+---
 
-2. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-3. Serve locally:
-   ```bash
-   mkdocs serve
-   ```
-
-4. Open your browser to `http://127.0.0.1:8000`
-
-### Building the Site
-
-```bash
-mkdocs build
-```
-
-The static site will be generated in the `site/` directory.
-
-## License
-
-This work is licensed under a [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-nc-sa/4.0/).
-
-## Repository
-
-GitHub: [https://github.com/Yarmoluk/supply-chain-risk-analyst](https://github.com/Yarmoluk/supply-chain-risk-analyst)
+*Demonstrating AI expert system development across any domain — from zero supply chain expertise to ISO 28000-aligned risk management reference.*
