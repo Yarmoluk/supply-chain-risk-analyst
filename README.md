@@ -1,10 +1,12 @@
 # Supply Chain Risk Analyst
 
-AI-powered intelligent textbook for supply chain risk management based on ISO 28000.
+![Material for MkDocs](https://img.shields.io/badge/Material_for_MkDocs-526CFE?style=for-the-badge&logo=MaterialForMkDocs&logoColor=white)
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-222222?style=for-the-badge&logo=github&logoColor=white)
+![Mermaid](https://img.shields.io/badge/Mermaid-FF3670?style=for-the-badge&logo=mermaid&logoColor=white)
+![License](https://img.shields.io/badge/License-grey?style=for-the-badge)
+![CC BY-NC-SA 4.0](https://img.shields.io/badge/CC_BY--NC--SA_4.0-lightgrey?style=for-the-badge)
 
-[![GitHub Pages](https://img.shields.io/badge/docs-live-brightgreen)](https://yarmoluk.github.io/supply-chain-risk-analyst/)
-[![Built with MkDocs Material](https://img.shields.io/badge/Built%20with-MkDocs%20Material-526CFE)](https://squidfunk.github.io/mkdocs-material/)
-[![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+AI-powered intelligent textbook for supply chain risk management based on ISO 28000.
 
 ## Overview
 
